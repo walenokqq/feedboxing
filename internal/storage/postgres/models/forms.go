@@ -1,11 +1,14 @@
 package models
 
-import "time"
+import (
+	"encoding/json"
+	"time"
+)
 
 type Form struct {
 	ID          uint
 	ProjectID   uint
 	Description string
-	// Schema JSONB
-	Created_at time.Time
+	Schema      json.RawMessage
+	Created_at  time.Time
 }

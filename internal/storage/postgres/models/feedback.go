@@ -1,11 +1,14 @@
 package models
 
-import "time"
+import (
+	"encoding/json"
+	"time"
+)
 
 type Feedback struct {
 	ID         uint
 	FormID     uint
-	Data       JSONB
+	Data       json.RawMessage
 	Status     string
 	Created_at time.Time
 }
